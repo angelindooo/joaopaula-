@@ -1854,3 +1854,51 @@ form label {
   margin-right: auto;
   width: 25rem;
 }
+
+.show-hide-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.show-hide-text a {
+  order: 2;
+}
+
+.show-hide-text p {
+  position: relative;
+  overflow: hidden;
+  max-height: 200px; // The Height of 3 rows
+}
+
+.show-hide-text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // 3 Rows of text
+  -webkit-box-orient: vertical;
+}
+
+.show-less {
+  display: none;
+}
+
+.show-less:target {
+  display: block;
+}
+
+.show-less:target ~ p {
+  display: block;
+  max-height: 100%;
+}
+
+.show-less:target + a {
+  display: none;
+}
+
+.btn-zap {
+  background-color: #5cb85c;
+  color: #fff;
+}
+
+.title-box {
+  word-break: "break-word", // btw: its `break-word`, not `word-break`
+  height: "100%"
+}
